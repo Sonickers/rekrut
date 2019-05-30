@@ -3,19 +3,10 @@ def check_if_leap_year?(year)
 end
 
 def get_days_for_month(month, year)
-  case month
-  when 1
-  when 3
-  when 5
-  when 7
-  when 8
-  when 10
-  when 12
+  case
+  when [1, 3, 5, 7, 8, 10, 12].include?(month)
     31
-  when 4
-  when 6
-  when 9
-  when 11
+  when [4, 6, 9, 11].include?(month)
     30
   when 2
     if check_if_leap_year?(year)
@@ -29,7 +20,6 @@ def get_days_for_month(month, year)
 end
 
 def prop_date(year, month, day)
-
   if year.between?(2001, 2099) && month.between?(1, 12)
     if day.between?(1, get_days_for_month(month, year))
       return true
@@ -39,5 +29,4 @@ def prop_date(year, month, day)
   else
     false
   end
-
 end

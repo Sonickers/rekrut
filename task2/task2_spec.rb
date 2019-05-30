@@ -2,7 +2,7 @@ require 'task2'
 
 describe "prop_date" do
   it "should check if date is correct" do
-    expect(prop_date(2011, 1, 1)).to eq true
+    expect(prop_date(2011, 1, 4)).to eq true
   end
 
   it "should return false with too many days" do
@@ -10,7 +10,7 @@ describe "prop_date" do
   end
 
   it "should return false with year above limit" do
-    expect(prop_date(2109, 03, 10)).to eq false
+    expect(prop_date(2109, 74, 10)).to eq false
   end
 
   it "should check if date is correct beeing a leap year" do
