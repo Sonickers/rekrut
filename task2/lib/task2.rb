@@ -3,10 +3,10 @@ def check_if_leap_year?(year)
 end
 
 def get_days_for_month(month, year)
-  case
-  when [1, 3, 5, 7, 8, 10, 12].include?(month)
+  case month
+  when 1, 3, 5, 7, 8, 10, 12
     31
-  when [4, 6, 9, 11].include?(month)
+  when 4, 6, 9, 11
     30
   when 2
     if check_if_leap_year?(year)
