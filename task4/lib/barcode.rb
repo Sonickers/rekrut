@@ -20,7 +20,7 @@ def prop_barcode(barcode, type)
     raise ArgumentError.new("Barcode too short.")
   end
 
-  barcode = barcode.slice(0..(barcode_length - 1))
+  barcode = barcode.slice(0...barcode_length)
 
   checksum = barcode[-1]
   barcode[-1] = ""
